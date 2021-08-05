@@ -20,7 +20,7 @@ RUN dos2unix run.sh
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get install -y x11vnc xvfb socat
+RUN apt-get install -y x11vnc xvfb socat openjfx
 
 WORKDIR /root
 
