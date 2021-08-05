@@ -25,7 +25,7 @@ RUN apt-get install -y x11vnc xvfb socat
 WORKDIR /root
 
 COPY --from=builder /root/install-tws.sh install-tws.sh
-RUN echo -e "\n\n" | ./install-tws.sh
+RUN (echo; echo) | ./install-tws.sh
 
 RUN mkdir .vnc
 RUN x11vnc -storepasswd 1358 .vnc/passwd
